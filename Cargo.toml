@@ -1,0 +1,32 @@
+[package]
+name = "async-imap-lite"
+version = "0.1.0"
+authors = ["vkill <vkill.net@gmail.com>"]
+edition = "2018"
+description = "Asynchronous imap."
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/bk-rs/async-imap-lite"
+homepage = "https://github.com/bk-rs/async-imap-lite"
+documentation = "https://docs.rs/async-imap-lite"
+keywords = []
+categories = ["asynchronous"]
+readme = "README.md"
+
+[features]
+async_tls = ["async-stream-tls-upgrader/async_tls_client"]
+async_native_tls = ["async-stream-tls-upgrader/async_native_tls_client"]
+
+[dependencies]
+imap-patch-for-async-imap-lite = { version = "2.2", default-features = false, features = [] }
+
+async-stream-packed = { version = "0.1", default-features = false, features = ["syncable_with_waker"] }
+async-stream-tls-upgrader = { version = "0.1", default-features = false, features = [] }
+futures-lite = { version = "0.1", default-features = false, features = [] }
+async-io = { version = "0.1", default-features = false, features = [] }
+async-net = { version = "0.1", default-features = false, features = [] }
+cfg-if = { version = "0.1", default-features = false, features = [] }
+
+[workspace]
+members = [
+    "demos/smol",
+]
