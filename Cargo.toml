@@ -19,7 +19,7 @@ async_native_tls = ["async-stream-tls-upgrader/async_native_tls_client"]
 [dependencies]
 imap-patch-for-async-imap-lite = { version = "2.2", default-features = false, features = [] }
 
-async-stream-packed = { version = "0.1", default-features = false, features = ["syncable_with_waker"] }
+async-stream-packed = { version = "0.1", default-features = false, features = ["syncable_with_waker", "upgradable", "tls"] }
 async-stream-tls-upgrader = { version = "0.1", default-features = false, features = [] }
 futures-lite = { version = "0.1", default-features = false, features = [] }
 async-io = { version = "0.1", default-features = false, features = [] }

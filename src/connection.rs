@@ -13,9 +13,8 @@ cfg_if::cfg_if! {
 
 pub(crate) use async_io::Async;
 use async_stream_packed::SyncableWithWakerAsyncStream;
-pub(crate) use async_stream_tls_upgrader::{
-    TlsClientUpgrader, UpgradableAsyncStream, UpgraderExtRefer,
-};
+pub(crate) use async_stream_packed::UpgradableAsyncStream;
+pub(crate) use async_stream_tls_upgrader::{TlsClientUpgrader, UpgraderExtRefer};
 use futures_lite::future;
 pub(crate) use futures_lite::{AsyncRead, AsyncWrite};
 
